@@ -1,4 +1,3 @@
-kk
 #!/usr/bin/python3
 """Module for app_views /status route"""
 from api.v1.views import app_views
