@@ -2,11 +2,6 @@
 """Module for Blueprint app_views"""
 from flask import Blueprint, abort, make_response
 
-app_views = Blueprint("app_views", __name__, url_prefix="/api/v1")
-
-from api.v1.views.index import *
-from api.v1.views.states import *
-
 
 def get_models(parent_model, parent_model_id, parent_getter):
     """GET /model api route"""
@@ -83,3 +78,8 @@ def put_model(model, model_id, ignore_data):
             setattr(obj, key, value)
     obj.save()
     return make_response(jsonify(obj.to_dict()), 200)
+
+
+app_views = Blueprint("app_views", __name__, url_prefix="/api/v1")
+from api.v1.views.index import *
+from api.v1.views.states import *
