@@ -10,6 +10,7 @@ def status():
     """Return /status api route"""
     return jsonify({"status": "OK"})
 
+
 @app_views.route('/stats', methods=['GET'])
 def stats():
     """status api route"""
