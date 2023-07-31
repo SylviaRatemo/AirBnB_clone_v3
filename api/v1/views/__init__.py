@@ -16,7 +16,7 @@ def get_models(parent_model, parent_model_id, parent_getter):
 
 
 def get_model(model, model_id):
-"""GET /model api route"""
+    """GET /model api route"""
     obj = storage.get(model, model_id)
     if not obj:
         return make_response(jsonify({"error": "Not found"}), 404)
