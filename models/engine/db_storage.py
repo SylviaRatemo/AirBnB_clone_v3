@@ -77,7 +77,7 @@ class DBStorage:
 
     def get(self, cls, id):
         """method to retrieve a single object"""
-        key_n = cls + "." + str(id)
+        key_n = cls.__name__ + "." + str(id)
         return self.all().get(key_n)
 
     get.__doc__ = "Method used to retrieve a single object"
