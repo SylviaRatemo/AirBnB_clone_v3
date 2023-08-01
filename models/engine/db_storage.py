@@ -80,6 +80,8 @@ class DBStorage:
         key_n = cls + "." + str(id)
         return self.all().get(key_n)
 
+    get.__doc__ = "Method used to retrieve a single object"
+
     def count(self, cls=None):
         """method to count object(s) in storage"""
         if not cls:

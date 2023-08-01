@@ -74,6 +74,8 @@ class FileStorage:
         key = cls + "." + str(id)
         return self.__objects.get(key)
 
+    get.__doc__ = "Method used to retrieve a single object"
+
     def count(self, cls=None):
         """method to count object(s) in storage"""
         if not cls:
